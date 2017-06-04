@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
         let realm = try! Realm()
         let data = realm.objects(Task.self) // query: get all Task
-        print(tasks)
+        
         
         tasks = Array(data)
         
@@ -75,6 +75,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell")!
      
         let task = tasks[indexPath.row]
+        
         cell.textLabel?.text = task.name
         if task.completed {
             cell.accessoryType = .checkmark

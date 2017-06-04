@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-// Dog model
+// Task model
 class Task: Object {
     dynamic var name = ""
     dynamic var completed = false
